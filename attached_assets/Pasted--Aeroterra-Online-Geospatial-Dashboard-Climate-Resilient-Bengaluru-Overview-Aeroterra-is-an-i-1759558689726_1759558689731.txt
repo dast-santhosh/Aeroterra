@@ -1,0 +1,59 @@
+🌍 Aeroterra – Online Geospatial Dashboard
+Climate-Resilient Bengaluru
+Overview
+Aeroterra is an interactive geospatial decision-support platform that integrates NASA Earth observation data, real-time climate APIs, and an AI-powered chatbot to address urban challenges in Bengaluru. It empowers citizens, policymakers, and urban planners with actionable insights for climate resilience.
+________________________________________
+✨ Key Features
+1.	Citizens Overview Dashboard
+o	Live metrics combining NASA datasets + Open-Meteo API:
+	🌡️ Average Temperature (heat island tracking)
+	💧 Lake Health Index (water quality, algal bloom risk)
+	🌫️ Air Quality Index (pollution hotspots)
+	🌳 Green Cover (%) (vegetation monitoring)
+o	Updated in real time for day-to-day awareness.
+2.	Environmental Overview Map
+o	Interactive satellite map powered by NASA MODIS, Landsat, and VIIRS.
+o	Detects heat islands, shrinking lakes, unplanned urban growth, and deforestation zones.
+3.	Stakeholder Dashboard and Dashboard Modules
+o	Citizens → monitor AQI, weather, and lake conditions.
+o	Policymakers → get evidence-based lake/air/land reports.
+o	Urban Planners → identify new housing, transit, and green corridors.
+st.sidebar.title("🎯 Stakeholder Dashboard")
+stakeholder = st.sidebar.selectbox(
+    "Select Stakeholder View:",
+    ["Citizens", "BBMP (City Planning)", "BWSSB (Water Board)", "BESCOM (Electricity)", "Parks Department", "Researchers"]
+)
+
+st.sidebar.title("📊 Dashboard Modules")
+module = st.sidebar.selectbox(
+    "Select Module:",
+    ["Overview", "Heat Islands", "Water Monitoring", "Air Quality", "Urban Growth", "Community Reports", "AI Assistant"]
+)
+
+4.	Terrabot – AI Climate Assistant 🤖 (Powered by Gemini API)
+o	Integrated chatbot trained on Aeroterra data + NASA Earth observations + Open-Meteo feeds.
+o	Citizens can ask natural questions like:
+	“What’s the AQI in Whitefield right now?”
+	“Which ward in Bengaluru has the worst heat island?”
+	“How much tree cover did we lose since 2000?”
+o	Gemini API processes the queries, retrieves data from the dashboard, and responds with clear, human-like answers, along with visual maps or charts.
+________________________________________
+🌐 Impact
+•	Citizens → Get instant, AI-powered answers to complex climate data.
+•	Policymakers → Use evidence-backed reports for lake restoration, pollution control, and resilience planning.
+•	Urban Planners → Align new housing, transport, and parks with sustainability goals.
+________________________________________
+🔑 Tech Stack
+•	Frontend: Streamlit + Leaflet (maps)
+•	Data Sources:
+o	NASA MODIS, Landsat, VIIRS, Sentinel
+o	Open-Meteo API (real-time weather & forecasts)
+•	AI Integration:
+o	Terrabot (Gemini API) → natural language Q&A chatbot
+o	Connects with backend data (satellite + APIs) for real-time insights
+•	Hosting: Streamlit Cloud
+________________________________________
+🌱 Vision
+Aeroterra is a living climate twin of Bengaluru. By merging NASA Earth science, real-time weather APIs, and Gemini-powered AI conversations, it creates a platform where anyone—from a student to a policymaker—can access the insights they need.
+Scalable to any fast-growing city, Aeroterra shows how AI + space data can ensure urban growth that is sustainable, equitable, and resilient.
+
